@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class StuDB {
-    public static HashMap<Long,Student> stuHashMap = new HashMap<Long, Student>();
+    public static HashMap<Long,Student> stuHashMap = new HashMap<>();
 
     public static void addStu(String name,Long phone){
 
@@ -19,7 +19,7 @@ public class StuDB {
     }
 
     public static ArrayList<Student> selectStu(Object object){
-        ArrayList<Student> stuList = new ArrayList<Student>();
+        ArrayList<Student> stuList = new ArrayList<>();
         if(object instanceof Long){//通过手机号查找
             try{
                 Student stu = stuHashMap.get(object);
@@ -58,7 +58,7 @@ public class StuDB {
     }
 
     public static float getAvgScore(){
-        float avgScore = 0;
+        float avgScore;
         float sumScore = 0;
         Set<HashMap.Entry<Long,Student>> entrySet = stuHashMap.entrySet();
         for(HashMap.Entry<Long,Student> entry:entrySet){
@@ -83,6 +83,7 @@ public class StuDB {
             }
         }
         System.out.println("成绩最好的学员是"+highName+"成绩是："+highScore);
+
     }
 
     public static void main(String[] args) {

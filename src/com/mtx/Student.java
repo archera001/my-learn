@@ -9,6 +9,15 @@ public class Student {
     public String sex;
     public String wx;
     public Long qq;
+    public float score;
+
+    public float getScore() {
+        return score;
+    }
+
+    public void setScore(float score) {
+        this.score = score;
+    }
 
     public Student(String name, Long phone){
         this.setName(name);
